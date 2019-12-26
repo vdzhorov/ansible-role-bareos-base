@@ -1,0 +1,10 @@
+---
+
+- name: Install Bareos repository (CentOS 6)
+  yum_repository:
+    name: "bareos_bareos-{{ bareos_version }}"
+    description: "bareos_bareos-{{ bareos_version }}"
+    baseurl: "http://download.bareos.org/bareos/release/{{ bareos_version }}/CentOS_6/"
+    gpgcheck: yes
+    gpgkey: "http://download.bareos.org/bareos/release/{{ bareos_version }}/CentOS_6/repodata/repomd.xml.key"
+    enabled: yes
