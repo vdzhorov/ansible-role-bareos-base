@@ -1,0 +1,11 @@
+---
+
+- name: Install Bareos repository (Ubuntu 16.04)
+  apt_repository:
+    repo: "http://download.bareos.org/bareos/release/{{ bareos_version }}/xUbuntu_16.04/"
+    state: present
+
+- name: Add apt key (Ubuntu 16.04)
+  apt_key:
+    url: "http://download.bareos.org/bareos/release/{{ bareos_version }}/xUbuntu_16.04/Release.key"
+    state: present

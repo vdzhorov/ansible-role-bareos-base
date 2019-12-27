@@ -1,0 +1,11 @@
+---
+
+- name: Install Bareos repository (Debian 8)
+  apt_repository:
+    repo: "http://download.bareos.org/bareos/release/{{ bareos_version }}/Debian_8.0/"
+    state: present
+
+- name: Add apt key (Debian 8)
+  apt_key:
+    url: "http://download.bareos.org/bareos/release/{{ bareos_version }}/Debian_8.0/Release.key"
+    state: present
