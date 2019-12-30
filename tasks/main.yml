@@ -5,38 +5,46 @@
   when: >
     ansible_distribution == "CentOS" and 
     ansible_distribution_major_version == "6"
+  tags: [bareos-client]
 
 - include: centos_7_repo.yml
   when: >
     ansible_distribution == "CentOS" and
     ansible_distribution_major_version == "7"
+  tags: [bareos-client]
 
 - include: centos_8_repo.yml
   when: >
     ansible_distribution == "CentOS" and
     ansible_distribution_major_version == "8"
+  tags: [bareos-client]
 
 - include: debian_8_repo.yml
   when: >
     ansible_distribution == "Debian" and
     ansible_distribution_major_version == "8"
+  tags: [bareos-client]
 
 - include: debian_9_repo.yml
   when: >
     ansible_distribution == "Debian" and
     ansible_distribution_major_version == "9"
+  tags: [bareos-client]
 
 - include: debian_10_repo.yml
   when: >
     ansible_distribution == "Debian" and
     ansible_distribution_major_version == "10"
+  tags: [bareos-client]
 
 - include: ubuntu_16.04_repo.yml
   when: >
     ansible_distribution == "Ubuntu" and
     ansible_distribution_major_version == "16.04"
+  tags: [bareos-client]
 
 - include: ubuntu_18.04_repo.yml
   when: >
     ansible_distribution == "Ubuntu" and
     ansible_distribution_major_version == "18.04"
+  tags: [bareos-client]
