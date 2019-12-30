@@ -4,6 +4,7 @@
   apt_repository:
     repo: "deb http://download.bareos.org/bareos/release/{{ bareos_version }}/Debian_8.0 /"
     state: present
+    filename: "bareos"
 
 - name: Add apt key (Debian 8)
   apt_key:
