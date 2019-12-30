@@ -2,7 +2,7 @@
 
 - name: Install Bareos repository (Ubuntu 18.04)
   apt_repository:
-    repo: "http://download.bareos.org/bareos/release/{{ bareos_version }}/xUbuntu_18.04/"
+    repo: "deb http://download.bareos.org/bareos/release/{{ bareos_version }}/xUbuntu_18.04 /"
     state: present
 
 - name: Add apt key (Ubuntu 18.04)
