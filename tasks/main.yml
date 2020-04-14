@@ -9,7 +9,8 @@
 
 - include: centos_7_repo.yml
   when: >
-    ansible_distribution == "CentOS" and
+    ansible_distribution == "CentOS" or
+    ansible_distribution == "Virtuozzu" and
     ansible_distribution_major_version == "7"
   tags: [bareos-client]
 

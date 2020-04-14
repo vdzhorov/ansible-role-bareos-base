@@ -1,6 +1,6 @@
 ---
 
-- name: Install Bareos repository (CentOS 7)
+- name: Install Bareos repository (CentOS 7 or Virtuozzo 7)
   yum_repository:
     name: "bareos_bareos-{{ bareos_version }}"
     description: "bareos_bareos-{{ bareos_version }}"
