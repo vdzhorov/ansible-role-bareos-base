@@ -2,11 +2,11 @@
 
 - name: Install Bareos repository (Debian 10)
   apt_repository:
-    repo: "deb http://download.bareos.org/bareos/release/{{ bareos_version }}/Debian_10 /"
+    repo: "deb http://download.bareos.org/bareos/release/{{ bareos_repo_release }}/Debian_10 /"
     state: present
     filename: "bareos"
 
 - name: Add apt key (Debian 10)
   apt_key:
-    url: "http://download.bareos.org/bareos/release/{{ bareos_version }}/Debian_10/Release.key"
+    url: "http://download.bareos.org/bareos/release/{{ bareos_repo_release }}/Debian_10/Release.key"
     state: present

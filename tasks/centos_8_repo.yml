@@ -2,9 +2,9 @@
 
 - name: Install Bareos repository (CentOS 8)
   yum_repository:
-    name: "bareos_bareos-{{ bareos_version }}"
-    description: "bareos_bareos-{{ bareos_version }}"
-    baseurl: "http://download.bareos.org/bareos/release/{{ bareos_version }}/CentOS_8/"
+    name: "bareos_bareos-{{ bareos_repo_release }}"
+    description: "bareos_bareos-{{ bareos_repo_release }}"
+    baseurl: "http://download.bareos.org/bareos/release/{{ bareos_repo_release }}/CentOS_8/"
     gpgcheck: yes
-    gpgkey: "http://download.bareos.org/bareos/release/{{ bareos_version }}/CentOS_8/repodata/repomd.xml.key"
+    gpgkey: "http://download.bareos.org/bareos/release/{{ bareos_repo_release }}/CentOS_8/repodata/repomd.xml.key"
     enabled: yes
