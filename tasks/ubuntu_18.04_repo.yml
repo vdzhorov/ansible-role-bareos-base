@@ -1,12 +1,12 @@
 ---
 
+- name: Add apt key (Ubuntu 18.04)
+  apt_key:
+    url: "http://download.bareos.org/bareos/release/{{ bareos_repo_release }}/xUbuntu_18.04/Release.key"
+    state: present
+
 - name: Install Bareos repository (Ubuntu 18.04)
   apt_repository:
     repo: "deb http://download.bareos.org/bareos/release/{{ bareos_repo_release }}/xUbuntu_18.04 /"
     state: present
     filename: "bareos"
-
-- name: Add apt key (Ubuntu 18.04)
-  apt_key:
-    url: "http://download.bareos.org/bareos/release/{{ bareos_repo_release }}/xUbuntu_18.04/Release.key"
-    state: present
