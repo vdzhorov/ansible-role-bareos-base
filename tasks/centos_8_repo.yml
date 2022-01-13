@@ -1,6 +1,6 @@
 ---
 
-- name: Install Bareos repository (CentOS 8)
+- name: Install Bareos repository (CentOS 8 or AlmaLinux)
   yum_repository:
     name: "bareos_bareos-{{ bareos_repo_release }}"
     description: "bareos_bareos-{{ bareos_repo_release }}"

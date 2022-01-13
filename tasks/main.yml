@@ -15,8 +15,10 @@
 
 - include: centos_8_repo.yml
   when: >
-    ansible_distribution == "CentOS" and
-    ansible_distribution_major_version == "8"
+    (ansible_distribution == "CentOS" and
+    ansible_distribution_major_version == "8") or
+    (ansible_distribution == "AlmaLinux" and
+    ansible_distribution_major_version == "8")
   tags: [bareos-client]
 
 - include: debian_8_repo.yml
